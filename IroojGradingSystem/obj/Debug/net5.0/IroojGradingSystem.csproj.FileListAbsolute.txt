@@ -1,0 +1,12 @@
+/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/bin/Debug/net5.0/IroojGradingSystem.deps.json
+/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/bin/Debug/net5.0/IroojGradingSystem.dll
+/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/bin/Debug/net5.0/ref/IroojGradingSystem.dll
+/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/bin/Debug/net5.0/IroojGradingSystem.pdb
+/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/obj/Debug/net5.0/IroojGradingSystem.csprojAssemblyReference.cache
+/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/obj/Debug/net5.0/IroojGradingSystem.GeneratedMSBuildEditorConfig.editorconfig
+/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/obj/Debug/net5.0/IroojGradingSystem.AssemblyInfoInputs.cache
+/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/obj/Debug/net5.0/IroojGradingSystem.AssemblyInfo.cs
+/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/obj/Debug/net5.0/IroojGradingSystem.csproj.CoreCompileInputs.cache
+/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/obj/Debug/net5.0/IroojGradingSystem.dll
+/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/obj/Debug/net5.0/ref/IroojGradingSystem.dll
+/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/obj/Debug/net5.0/IroojGradingSystem.pdb
