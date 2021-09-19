@@ -9,5 +9,6 @@ namespace IroojGradingSystem
         MLE,
         CE,
         Error,
+        Running,
     }
 }

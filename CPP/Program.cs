@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using IroojGradingSystem;
 
 namespace CPP
@@ -8,13 +9,13 @@ namespace CPP
         static void Main(string[] args)
         {
             //Process.Start("/bin/bash");
-            new GradCPP().Test();
+            new GradCPP(new StreamWriter(Console.OpenStandardOutput())).Test();
         }
     }
 
-    class GradCPP : Base
+    public class GradCPP : Base
     {
-        public GradCPP()
+        public GradCPP(StreamWriter stream) : base(stream)
         {
             MemoryLimit = 512 * 1024;
             TimeLimit = TimeSpan.FromMilliseconds(1000);
@@ -30,6 +31,7 @@ namespace CPP
 
         public void Test()
         {
+            File.Copy("main.cpp", "grad/main.cpp");
             Start();
         }
     }
