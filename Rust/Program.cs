@@ -10,13 +10,13 @@ namespace Rust
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            new GradRust().Test();
+            new GradRust(new StreamWriter(Console.OpenStandardOutput())).Test();
         }
     }
 
-    class GradRust : Base
+    public class GradRust : Base
     {
-        public GradRust()
+        public GradRust(StreamWriter stream) : base(stream)
         {
             MemoryLimit = 512 * 1024;
             TimeLimit = TimeSpan.FromMilliseconds(1000);
@@ -27,7 +27,10 @@ namespace Rust
         }
 
         public void Test()
-            => Start();
+        {
+            File.Copy("main.rs", "grad/main.rs");
+            Start();
+        }
     }
 }
 

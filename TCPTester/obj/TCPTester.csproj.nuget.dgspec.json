@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/dayo/RiderProjects/GradingSystem/TCPTester/TCPTester.csproj": {}
+    "/home/dayo/IroOJ/GradingSystem/TCPTester/TCPTester.csproj": {}
   },
   "projects": {
-    "/home/dayo/RiderProjects/GradingSystem/TCPTester/TCPTester.csproj": {
+    "/home/dayo/IroOJ/GradingSystem/TCPTester/TCPTester.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dayo/RiderProjects/GradingSystem/TCPTester/TCPTester.csproj",
+        "projectUniqueName": "/home/dayo/IroOJ/GradingSystem/TCPTester/TCPTester.csproj",
         "projectName": "TCPTester",
-        "projectPath": "/home/dayo/RiderProjects/GradingSystem/TCPTester/TCPTester.csproj",
+        "projectPath": "/home/dayo/IroOJ/GradingSystem/TCPTester/TCPTester.csproj",
         "packagesPath": "/home/dayo/.nuget/packages/",
-        "outputPath": "/home/dayo/RiderProjects/GradingSystem/TCPTester/obj/",
+        "outputPath": "/home/dayo/IroOJ/GradingSystem/TCPTester/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/dayo/.nuget/NuGet/NuGet.Config"
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.207/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/dayo/.dotnet/sdk/5.0.207/RuntimeIdentifierGraph.json"
         }
       }
     }

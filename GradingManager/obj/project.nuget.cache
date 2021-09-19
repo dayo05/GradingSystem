@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "esKcbvJ9s0ASrrYNl1z0Qf/pmTN7jG6XeDASqDos0TZDw7dAoC1MRjX8TI+ztMkZcymvs6ZEYC/laezqFy7WyQ==",
+  "dgSpecHash": "6iK9FIsii3m4TBum4GZqxsjc/NpnU7878PGBFkNa6H2C13t2zja+PUVIZsr4HjZMlGaPet0w8QH1mjvAL8nlNA==",
   "success": true,
-  "projectFilePath": "/home/dayo/RiderProjects/GradingSystem/GradingManager/GradingManager.csproj",
+  "projectFilePath": "/home/dayo/IroOJ/GradingSystem/GradingManager/GradingManager.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

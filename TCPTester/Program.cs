@@ -12,34 +12,29 @@ namespace TCPTester
     {
         static void Main(string[] args)
         {
-            SendData("<?xml version=\"1.0\" encoding=\"UTF-8\"?><root><question_number>123</question_number><language>CS</language><code>using System;\nusing System.Linq;\nvar x = Console.ReadLine().Split().Select(int.Parse).ToList();Console.WriteLine(x[0] + x[1]);</code></root>");
+            //SendData("<?xml version=\"1.0\" encoding=\"UTF-8\"?><root><question_number>123</question_number><language>CS</language></root>", "using System;\nusing System.Linq;\nvar x = Console.ReadLine().Split().Select(int.Parse).ToList();Console.WriteLine(x[0] + x[1]);");
+            SendData(123, "CS", "using System;\nusing System.Linq;\nvar x = Console.ReadLine().Split().Select(int.Parse).ToList();Console.WriteLine(x[0] + x[1]);");
+            SendData(123, "CS", "using System;\nusing System.Linq;\nvar x = Console.ReadLine().Split().Select(int.Parse).ToList();Console.WriteLine(x[0] - x[1]);");
+            SendData(12, "CPP", "#include <iostream>\nusing namespace std;\nsigned main(){int a, b;cin>>a>>b;cout<<a+b;return 0;}");
+            SendData(1212, "Rust", "use std::io;fn main() {let mut s = String::new();io::stdin().read_line(&mut s).expect(\"Failed to read line\");let inputs:Vec<u32> = s.split_whitespace().map(|x| x.parse().expect(\"Input is not integar!\")).collect();println!(\"{}\", inputs[0]+inputs[1]);}");
         }
 
-        static void SendData(string data)
+        static void SendData(int questionNumber, string language, string code)
         {
-            var tcp = new TcpClient("127.0.0.1", 8080);
-            var stream = tcp.GetStream();
-            var buffer = Encoding.UTF8.GetBytes(data);
-            stream.Write(buffer, 0, buffer.Length);
-            stream.Flush();
-            
-            new Thread(() =>
-            {
-                var readTcp = new TcpListener(IPAddress.Loopback, 8081);
-                readTcp.Start();
-                var client = readTcp.AcceptTcpClient();
-                var readStream = client.GetStream();
-                while (client.Connected)
-                {
-                    if (!readStream.CanRead) continue;
-                    var byteRead = 0;
-                    var recvData = new StringBuilder();
-                    while ((byteRead = readStream.Read(buffer, 0, buffer.Length)) > 0)
-                        recvData.Append(Encoding.UTF8.GetString(buffer, 0, byteRead));
-                    Console.WriteLine(recvData);
-                }
-            }).Start();
-            Console.ReadKey();
+            using var tcp = new TcpClient("127.0.0.1", 8080);
+            using var stream = tcp.GetStream();
+            using var reader = new StreamReader(stream);
+            using var writer = new StreamWriter(stream);
+            var data =
+                $"<?xml version=\"1.0\" encoding=\"UTF-8\"?><root><question_number>{questionNumber}</question_number><language>{language}</language><code_size>{code.Length}</code_size></root>";
+            writer.WriteLine(data.Trim());
+            writer.Flush();
+            writer.Write(code.Trim());
+            writer.Flush();
+            while(!reader.EndOfStream)
+                Console.WriteLine(reader.ReadLine());
+            writer.Close();
+            reader.Close();
         }
     }
 }

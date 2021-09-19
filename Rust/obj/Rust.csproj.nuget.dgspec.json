@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/dayo/RiderProjects/GradingSystem/Rust/Rust.csproj": {}
+    "/home/dayo/IroOJ/GradingSystem/Rust/Rust.csproj": {}
   },
   "projects": {
-    "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj": {
+    "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj",
+        "projectUniqueName": "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj",
         "projectName": "IroojGradingSystem",
-        "projectPath": "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj",
+        "projectPath": "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj",
         "packagesPath": "/home/dayo/.nuget/packages/",
-        "outputPath": "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/obj/",
+        "outputPath": "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/dayo/.nuget/NuGet/NuGet.Config"
@@ -52,18 +52,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.207/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/dayo/.dotnet/sdk/5.0.207/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/dayo/RiderProjects/GradingSystem/Rust/Rust.csproj": {
+    "/home/dayo/IroOJ/GradingSystem/Rust/Rust.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dayo/RiderProjects/GradingSystem/Rust/Rust.csproj",
+        "projectUniqueName": "/home/dayo/IroOJ/GradingSystem/Rust/Rust.csproj",
         "projectName": "Rust",
-        "projectPath": "/home/dayo/RiderProjects/GradingSystem/Rust/Rust.csproj",
+        "projectPath": "/home/dayo/IroOJ/GradingSystem/Rust/Rust.csproj",
         "packagesPath": "/home/dayo/.nuget/packages/",
-        "outputPath": "/home/dayo/RiderProjects/GradingSystem/Rust/obj/",
+        "outputPath": "/home/dayo/IroOJ/GradingSystem/Rust/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/dayo/.nuget/NuGet/NuGet.Config"
@@ -78,8 +78,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj": {
-                "projectPath": "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj"
+              "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj": {
+                "projectPath": "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj"
               }
             }
           }
@@ -108,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.207/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/dayo/.dotnet/sdk/5.0.207/RuntimeIdentifierGraph.json"
         }
       }
     }

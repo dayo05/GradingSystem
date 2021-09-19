@@ -32,22 +32,10 @@ namespace GradingManager
             {
                 using var client = listener.AcceptTcpClient();
                 using var stream = client.GetStream();
-                var buffer = new byte[1024];
-                int byteRead;
-                var recvData = new StringBuilder();
-                while ((byteRead = stream.Read(buffer, 0, buffer.Length)) > 0)
-                    recvData.Append(Encoding.UTF8.GetString(buffer, 0, byteRead));
-                Console.WriteLine("Received");
+                using var reader = new StreamReader(stream);
+                using var writer = new StreamWriter(stream);
 
-                new Thread(() =>
-                {
-                    var tcp = new TcpClient("127.0.0.1", 8081);
-                    var writeStream = tcp.GetStream();
-                    writeStream.Write(Encoding.UTF8.GetBytes("Received"));
-                    writeStream.Flush();
-                }).Start();
-                
-                var data = recvData.ToString();
+                var data = reader.ReadLine();
                 var xmldoc = new XmlDocument();
                 xmldoc.LoadXml(data);
 
@@ -55,35 +43,35 @@ namespace GradingManager
                 
                 var questionNumber = int.Parse(xml[0]["question_number"].InnerText);
                 var language = xml[0]["language"].InnerText;
-                var code = xml[0]["code"].InnerText;
+                var codesize = int.Parse(xml[0]["code_size"].InnerText);
+                var code = "";
+                var buffer = new char[1000];
+                int r;
+                while ((r = reader.Read(buffer, 0, buffer.Length)) != 0)
+                {
+                    code += new string(buffer)[..r];
+                    codesize -= r;
+                    if (codesize == 0) break;
+                }
+
                 using var sourcecode = new StreamWriter(GetSourceCodeByLanguage(language));
                 sourcecode.Write(code);
                 
-                Console.WriteLine(questionNumber);
-                Console.WriteLine(language);
-                Console.WriteLine(code);
                 sourcecode.Flush();
                 switch (language)
                 {
                     case "CPP":
-                        new CPP.GradCPP().Test();
+                        new CPP.GradCPP(writer).Test();
                         break;
                     case "CS":
-                        new CS.GradCS().Test();
+                        new CS.GradCS(writer).Test();
                         break;
                     case "Rust":
+                        new Rust.GradRust(writer).Test();
                         break;
                     default:
                         break;
                 }
-                /*
-                new Thread(() =>
-                {
-                    var buf = Encoding.UTF8.GetBytes("Hello, world!");
-                    stream.Write(buf, 0, buf.Length);
-                    stream.Flush();
-                }).Start();
-                */
             }
         }
     }

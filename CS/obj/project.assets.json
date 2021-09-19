@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dayo/RiderProjects/GradingSystem/CS/CS.csproj",
+      "projectUniqueName": "/home/dayo/IroOJ/GradingSystem/CS/CS.csproj",
       "projectName": "CS",
-      "projectPath": "/home/dayo/RiderProjects/GradingSystem/CS/CS.csproj",
+      "projectPath": "/home/dayo/IroOJ/GradingSystem/CS/CS.csproj",
       "packagesPath": "/home/dayo/.nuget/packages/",
-      "outputPath": "/home/dayo/RiderProjects/GradingSystem/CS/obj/",
+      "outputPath": "/home/dayo/IroOJ/GradingSystem/CS/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/dayo/.nuget/NuGet/NuGet.Config"
@@ -51,8 +51,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj": {
-              "projectPath": "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj"
+            "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj": {
+              "projectPath": "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj"
             }
           }
         }
@@ -81,7 +81,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.207/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/dayo/.dotnet/sdk/5.0.207/RuntimeIdentifierGraph.json"
       }
     }
   }

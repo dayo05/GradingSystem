@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Eaq9TGwYP8pfFzbr3fYkrJUFAurCIluNw+B1BBG7X8y2Y40jBoLNXMN9FUSp47hivTs8ehiUlygAFIQkiUhkFQ==",
+  "dgSpecHash": "UXwSTkfil0vIFdnUmmVr7I+bjhsGP8M4XAppqxwfSmUlFMBg2PIg3Uj7oQAt6ir0GXBrboLW3JvRALFzk5WB9A==",
   "success": true,
-  "projectFilePath": "/home/dayo/RiderProjects/GradingSystem/Rust/Rust.csproj",
+  "projectFilePath": "/home/dayo/IroOJ/GradingSystem/Rust/Rust.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
