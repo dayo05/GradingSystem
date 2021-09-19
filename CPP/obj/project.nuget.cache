@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l014NfOSFnn/PMwMVxcUNopDmihEBEThPfzkcxauP+aVNUmvOHBTBZm4BnkfOibkjhiL2DuocOtla38DDF7Fvw==",
+  "dgSpecHash": "cimNOgFBH1lYW3UO+aWdLTmW3kBVxe6au9jNKkC2pvJN5BeGnY47WaPeIsYy8i1Gsyw/w7pWNS5PCrrpLD4iFQ==",
   "success": true,
-  "projectFilePath": "/home/dayo/IroOJ/GradingSystem/CPP/CPP.csproj",
+  "projectFilePath": "/home/dayo/RiderProjects/GradingSystem/CPP/CPP.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

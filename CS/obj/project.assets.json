@@ -1,0 +1,88 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "IroojGradingSystem/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/IroojGradingSystem.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IroojGradingSystem.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "IroojGradingSystem/1.0.0": {
+      "type": "project",
+      "path": "../IroojGradingSystem/IroojGradingSystem.csproj",
+      "msbuildProject": "../IroojGradingSystem/IroojGradingSystem.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "IroojGradingSystem >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/dayo/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/dayo/RiderProjects/GradingSystem/CS/CS.csproj",
+      "projectName": "CS",
+      "projectPath": "/home/dayo/RiderProjects/GradingSystem/CS/CS.csproj",
+      "packagesPath": "/home/dayo/.nuget/packages/",
+      "outputPath": "/home/dayo/RiderProjects/GradingSystem/CS/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/dayo/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj": {
+              "projectPath": "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.207/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

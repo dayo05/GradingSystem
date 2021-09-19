@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Threading;
 
 namespace IroojGradingSystem
@@ -19,9 +20,9 @@ namespace IroojGradingSystem
         /// </summary>
         /// <param name="error">Runtime error string</param>
         /// <returns></returns>
-        static string CheckRteString(string error)
+        protected virtual string CheckRteString(string error)
         {
-            return "";
+            return error;
         }
 
         /// <summary>
@@ -30,11 +31,8 @@ namespace IroojGradingSystem
         private bool Compile()
         {
             if (CompileString == null) return true;
-            foreach (var command in CompileString)
+            foreach (var process in CompileString.Select(Run))
             {
-                Console.WriteLine($"/bin/bash {command} 2>> error");
-//                var process = Process.Start($"/bin/bash {command} 2>> error");
-                var process = Run(command);
                 if (process == null)
                 {
                     SendResult(Result.Error, "Cannot found compile program");
@@ -42,7 +40,6 @@ namespace IroojGradingSystem
                 }
                 process.WaitForExit();
                 if (process.ExitCode == 0) continue;
-//                using var error = new StreamReader("error");
                 SendResult(Result.CE, process.StandardError.ReadToEnd());
                 return false;
             }
@@ -142,14 +139,17 @@ namespace IroojGradingSystem
                 }
 
                 maxTime = maxTime > stopwatch.Elapsed ? maxTime : stopwatch.Elapsed;
+                SendResult(Result.Running, "Checked: " + i);
             }
-            SendResult(Result.AC, $"{maxMemory / 1024} {maxTime.Milliseconds}");
+            SendResult(Result.AC, $"{maxMemory / 1024}KiB {maxTime.Milliseconds}ms");
         }
 
         public void Start()
         {
+            SendResult(Result.Running, "Start");
             if (Compile())
             {
+                SendResult(Result.Running, "Compiled");
                 Launch();
             }
         }
@@ -171,7 +171,8 @@ namespace IroojGradingSystem
                 Arguments = string.Join(' ', exec.Split().Length != 1 ? exec.Split()[1..] : new string[]{""}),
                 RedirectStandardError = true,
                 RedirectStandardOutput = true,
-                UseShellExecute = false
+                UseShellExecute = false,
+                WorkingDirectory = Directory.GetCurrentDirectory()
             });
     }
 }
