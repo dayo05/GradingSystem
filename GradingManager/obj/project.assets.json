@@ -1,0 +1,150 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "CPP/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "IroojGradingSystem": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CPP.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CPP.dll": {}
+        }
+      },
+      "CS/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "IroojGradingSystem": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CS.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CS.dll": {}
+        }
+      },
+      "IroojGradingSystem/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/IroojGradingSystem.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IroojGradingSystem.dll": {}
+        }
+      },
+      "Rust/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "IroojGradingSystem": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rust.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rust.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CPP/1.0.0": {
+      "type": "project",
+      "path": "../CPP/CPP.csproj",
+      "msbuildProject": "../CPP/CPP.csproj"
+    },
+    "CS/1.0.0": {
+      "type": "project",
+      "path": "../CS/CS.csproj",
+      "msbuildProject": "../CS/CS.csproj"
+    },
+    "IroojGradingSystem/1.0.0": {
+      "type": "project",
+      "path": "../IroojGradingSystem/IroojGradingSystem.csproj",
+      "msbuildProject": "../IroojGradingSystem/IroojGradingSystem.csproj"
+    },
+    "Rust/1.0.0": {
+      "type": "project",
+      "path": "../Rust/Rust.csproj",
+      "msbuildProject": "../Rust/Rust.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "CPP >= 1.0.0",
+      "CS >= 1.0.0",
+      "Rust >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/dayo/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/dayo/RiderProjects/GradingSystem/GradingManager/GradingManager.csproj",
+      "projectName": "GradingManager",
+      "projectPath": "/home/dayo/RiderProjects/GradingSystem/GradingManager/GradingManager.csproj",
+      "packagesPath": "/home/dayo/.nuget/packages/",
+      "outputPath": "/home/dayo/RiderProjects/GradingSystem/GradingManager/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/dayo/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "/home/dayo/RiderProjects/GradingSystem/CPP/CPP.csproj": {
+              "projectPath": "/home/dayo/RiderProjects/GradingSystem/CPP/CPP.csproj"
+            },
+            "/home/dayo/RiderProjects/GradingSystem/CS/CS.csproj": {
+              "projectPath": "/home/dayo/RiderProjects/GradingSystem/CS/CS.csproj"
+            },
+            "/home/dayo/RiderProjects/GradingSystem/Rust/Rust.csproj": {
+              "projectPath": "/home/dayo/RiderProjects/GradingSystem/Rust/Rust.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.207/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

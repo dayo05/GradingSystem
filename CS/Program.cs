@@ -15,7 +15,7 @@ namespace CS
         }
     }
 
-    class GradCS : Base
+    public class GradCS : Base
     {
         public GradCS()
         {

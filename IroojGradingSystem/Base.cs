@@ -129,6 +129,7 @@ namespace IroojGradingSystem
                     {
                         if (output.EndOfStream) break;
                         optString = output.ReadLine().Trim();
+                        Console.WriteLine(optString);
                     }
 
                     if (ansString == "" && optString == "") break;
@@ -159,8 +160,8 @@ namespace IroojGradingSystem
                 Launch();
             }
             Directory.SetCurrentDirectory("..");
-            //Directory.Delete("grad", true);
-            //Directory.CreateDirectory("grad");
+            Directory.Delete("grad", true);
+            Directory.CreateDirectory("grad");
         }
         
         /// <summary>

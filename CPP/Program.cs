@@ -12,7 +12,7 @@ namespace CPP
         }
     }
 
-    class GradCPP : Base
+    public class GradCPP : Base
     {
         public GradCPP()
         {

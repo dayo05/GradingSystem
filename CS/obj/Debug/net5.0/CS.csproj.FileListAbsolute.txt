@@ -1,7 +1,4 @@
-/home/dayo/RiderProjects/GradingSystem/CS/bin/Debug/net5.0/CS
 /home/dayo/RiderProjects/GradingSystem/CS/bin/Debug/net5.0/CS.deps.json
-/home/dayo/RiderProjects/GradingSystem/CS/bin/Debug/net5.0/CS.runtimeconfig.json
-/home/dayo/RiderProjects/GradingSystem/CS/bin/Debug/net5.0/CS.runtimeconfig.dev.json
 /home/dayo/RiderProjects/GradingSystem/CS/bin/Debug/net5.0/CS.dll
 /home/dayo/RiderProjects/GradingSystem/CS/bin/Debug/net5.0/ref/CS.dll
 /home/dayo/RiderProjects/GradingSystem/CS/bin/Debug/net5.0/CS.pdb
@@ -16,4 +13,3 @@
 /home/dayo/RiderProjects/GradingSystem/CS/obj/Debug/net5.0/CS.dll
 /home/dayo/RiderProjects/GradingSystem/CS/obj/Debug/net5.0/ref/CS.dll
 /home/dayo/RiderProjects/GradingSystem/CS/obj/Debug/net5.0/CS.pdb
-/home/dayo/RiderProjects/GradingSystem/CS/obj/Debug/net5.0/CS.genruntimeconfig.cache
