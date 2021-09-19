@@ -100,8 +100,9 @@ namespace IroojGradingSystem
                 if (killed) return;
                 if (process.ExitCode != 0)
                 {
+                    Console.WriteLine(process.ExitCode);
                     SendResult(Result.RTE, "NZEC");
-                    return;
+                    //return;
                 }
                 
                 var error = process.StandardError;
@@ -158,8 +159,8 @@ namespace IroojGradingSystem
                 Launch();
             }
             Directory.SetCurrentDirectory("..");
-            Directory.Delete("grad", true);
-            Directory.CreateDirectory("grad");
+            //Directory.Delete("grad", true);
+            //Directory.CreateDirectory("grad");
         }
         
         /// <summary>
