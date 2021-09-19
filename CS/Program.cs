@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.IO;
 using IroojGradingSystem;
 
 
@@ -33,6 +33,9 @@ namespace CS
         }
 
         public void Test()
-            => Start();
+        {
+            File.Copy("Main.cs", "grad/Main.cs");
+            Start();
+        }
     }
 }
