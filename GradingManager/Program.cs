@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Diagnostics.Tracing;
 using System.IO;
 using System.Net;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading;
 using System.Xml;
+using System.Net.Sockets;
 
-using IroojGradingSystem;
 using LanguageSupport;
 
 namespace GradingManager
@@ -28,6 +24,8 @@ namespace GradingManager
                     return "main.py";
                 case "Aheui":
                     return "main.aheui";
+                case "Brainfuck":
+                    return "main.bf";
                 default:
                     return "Error.log";
             }
@@ -87,6 +85,9 @@ namespace GradingManager
                         break;
                     case "Aheui":
                         new Aheui(writer, memoryLimit, timeLimit, testCaseCount).Test();
+                        break;
+                    case "Brainfuck":
+                        new BrainFuck(writer, memoryLimit, timeLimit, testCaseCount).Test();
                         break;
                     default:
                         break;

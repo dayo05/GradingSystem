@@ -22,6 +22,13 @@ RUN pacman -Sy --noconfirm python3
 RUN wget https://raw.githubusercontent.com/aheui/caheui/master/aheui.c
 RUN gcc -o /root/aheui aheui.c
 
+# Brainfuck Support
+RUN pacman -S --noconfirm editline git make cmake pkg-config libedit
+RUN git clone https://github.com/rdebath/Brainfuck.git
+WORKDIR Brainfuck
+RUN build
+RUN mv brainfuck /root/
+
 WORKDIR /app
 
 RUN ls
