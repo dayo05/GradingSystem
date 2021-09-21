@@ -24,10 +24,10 @@ namespace CS
             TestCaseCount = 2;
             CompileString = new List<string>
             {
-                "/home/dayo/.dotnet/dotnet new console --force -o ./Main",
+                "/root/.dotnet/dotnet new console --force -o ./Main",
                 "rm Main/Program.cs",
                 "cp ./Main.cs ./Main/Program.cs",
-                "/home/dayo/.dotnet/dotnet publish Main --configuration Release --self-contained true --runtime linux-x64"
+                "/root/.dotnet/dotnet publish Main --configuration Release --self-contained true --runtime linux-x64"
             };
             RunScript = "Main/bin/Release/net5.0/linux-x64/Main";
         }

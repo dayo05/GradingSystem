@@ -21,9 +21,8 @@ namespace Rust
             MemoryLimit = 512 * 1024;
             TimeLimit = TimeSpan.FromMilliseconds(1000);
             TestCaseCount = 2;
-            CompileString = new List<string> {"/home/dayo/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rustc main.rs"};
+            CompileString = new List<string> {"/root/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rustc main.rs"};
             RunScript = "./main";
-            File.Copy("main.rs", "grad/main.rs");
         }
 
         public void Test()

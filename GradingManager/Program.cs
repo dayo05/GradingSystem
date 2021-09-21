@@ -26,6 +26,7 @@ namespace GradingManager
         }
         static void Main(string[] args)
         {
+            Console.WriteLine("Running");
             var listener = new TcpListener(IPAddress.Loopback, 8080);
             listener.Start();
             while (true)
@@ -35,6 +36,7 @@ namespace GradingManager
                 using var reader = new StreamReader(stream);
                 using var writer = new StreamWriter(stream);
 
+                Console.WriteLine("Connected");
                 var data = reader.ReadLine();
                 var xmldoc = new XmlDocument();
                 xmldoc.LoadXml(data);
