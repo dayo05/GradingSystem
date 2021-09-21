@@ -7,9 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\CPP\CPP.csproj" />
-      <ProjectReference Include="..\CS\CS.csproj" />
-      <ProjectReference Include="..\Rust\Rust.csproj" />
+      <ProjectReference Include="..\LanguageSupport\LanguageSupport.csproj" />
     </ItemGroup>
 
 </Project>

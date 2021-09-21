@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading;
 using System.Xml;
 
+using IroojGradingSystem;
+using LanguageSupport;
+
 namespace GradingManager
 {
     class Program
@@ -39,13 +42,15 @@ namespace GradingManager
                 Console.WriteLine("Connected");
                 var data = reader.ReadLine();
                 var xmldoc = new XmlDocument();
-                xmldoc.LoadXml(data);
+                xmldoc.LoadXml(data ?? string.Empty);
 
                 var xml = xmldoc.GetElementsByTagName("root");
                 
-                var questionNumber = int.Parse(xml[0]["question_number"].InnerText);
-                var language = xml[0]["language"].InnerText;
-                var codesize = int.Parse(xml[0]["code_size"].InnerText);
+                var timeLimit = long.Parse(xml[0]?["time_limit"]?.InnerText);
+                var memoryLimit = long.Parse(xml[0]?["memory_limit"]?.InnerText);
+                var testCaseCount = int.Parse(xml[0]?["test_case_count"]?.InnerText);
+                var language = xml[0]["language"]?.InnerText;
+                var codesize = int.Parse(xml[0]["code_size"]?.InnerText);
                 var code = "";
                 var buffer = new char[1000];
                 int r;
@@ -63,13 +68,13 @@ namespace GradingManager
                 switch (language)
                 {
                     case "CPP":
-                        new CPP.GradCPP(writer).Test();
+                        new CPP(writer, memoryLimit, timeLimit, testCaseCount).Test();
                         break;
                     case "CS":
-                        new CS.GradCS(writer).Test();
+                        new CS(writer, memoryLimit, timeLimit, testCaseCount).Test();
                         break;
                     case "Rust":
-                        new Rust.GradRust(writer).Test();
+                        new Rust(writer, memoryLimit, timeLimit, testCaseCount).Test();
                         break;
                     default:
                         break;
