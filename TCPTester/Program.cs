@@ -18,6 +18,8 @@ namespace TCPTester
             SendData(1000, 512*1024, 2, "Rust", "use std::io;fn main() {let mut s = String::new();io::stdin().read_line(&mut s).expect(\"Failed to read line\");let inputs:Vec<u32> = s.split_whitespace().map(|x| x.parse().expect(\"Input is not integar!\")).collect();println!(\"{}\", inputs[0]+inputs[1]);}");
             SendData(1, 512*1024, 2, "CS", "using System;\nusing System.Linq;\nvar x = Console.ReadLine().Split().Select(int.Parse).ToList();Console.WriteLine(x[0] + x[1]);");
             SendData(1000, 1, 2, "CS", "using System;\nusing System.Linq;\nvar x = Console.ReadLine().Split().Select(int.Parse).ToList();Console.WriteLine(x[0] + x[1]);");
+            SendData(1000,512*1024,2,"Python3", "a, b = map(int, input().split())\nprint(a+b)");
+            SendData(1000, 512*1024, 2, "Aheui", "방방다망함ㅋㅋㅋ");
         }
         static void SendData(long timeLimit, long memoryLimit, int testCaseCount, string language, string code)
         {
