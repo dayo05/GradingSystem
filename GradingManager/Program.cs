@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Tracing;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
@@ -23,6 +24,10 @@ namespace GradingManager
                     return "Main.cs";
                 case "Rust":
                     return "main.rs";
+                case "Python3":
+                    return "main.py";
+                case "Aheui":
+                    return "main.aheui";
                 default:
                     return "Error.log";
             }
@@ -65,6 +70,7 @@ namespace GradingManager
                 sourcecode.Write(code);
                 
                 sourcecode.Flush();
+                Console.WriteLine(language);
                 switch (language)
                 {
                     case "CPP":
@@ -75,6 +81,12 @@ namespace GradingManager
                         break;
                     case "Rust":
                         new Rust(writer, memoryLimit, timeLimit, testCaseCount).Test();
+                        break;
+                    case "Python3":
+                        new Python3(writer, memoryLimit, timeLimit, testCaseCount).Test();
+                        break;
+                    case "Aheui":
+                        new Aheui(writer, memoryLimit, timeLimit, testCaseCount).Test();
                         break;
                     default:
                         break;
