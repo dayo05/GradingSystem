@@ -11,19 +11,6 @@
         "runtime": {
           "bin/placeholder/IroojGradingSystem.dll": {}
         }
-      },
-      "LanguageSupport/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "IroojGradingSystem": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/LanguageSupport.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/LanguageSupport.dll": {}
-        }
       }
     }
   },
@@ -32,16 +19,11 @@
       "type": "project",
       "path": "../IroojGradingSystem/IroojGradingSystem.csproj",
       "msbuildProject": "../IroojGradingSystem/IroojGradingSystem.csproj"
-    },
-    "LanguageSupport/1.0.0": {
-      "type": "project",
-      "path": "../LanguageSupport/LanguageSupport.csproj",
-      "msbuildProject": "../LanguageSupport/LanguageSupport.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "LanguageSupport >= 1.0.0"
+      "IroojGradingSystem >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -50,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dayo/IroOJ/GradingSystem/GradingManager/GradingManager.csproj",
-      "projectName": "GradingManager",
-      "projectPath": "/home/dayo/IroOJ/GradingSystem/GradingManager/GradingManager.csproj",
+      "projectUniqueName": "/home/dayo/IroOJ/GradingSystem/LanguageSupport/LanguageSupport.csproj",
+      "projectName": "LanguageSupport",
+      "projectPath": "/home/dayo/IroOJ/GradingSystem/LanguageSupport/LanguageSupport.csproj",
       "packagesPath": "/home/dayo/.nuget/packages/",
-      "outputPath": "/home/dayo/IroOJ/GradingSystem/GradingManager/obj/",
+      "outputPath": "/home/dayo/IroOJ/GradingSystem/LanguageSupport/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/dayo/.nuget/NuGet/NuGet.Config"
@@ -69,8 +51,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/home/dayo/IroOJ/GradingSystem/LanguageSupport/LanguageSupport.csproj": {
-              "projectPath": "/home/dayo/IroOJ/GradingSystem/LanguageSupport/LanguageSupport.csproj"
+            "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj": {
+              "projectPath": "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj"
             }
           }
         }

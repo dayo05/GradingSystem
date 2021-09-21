@@ -8,7 +8,6 @@ namespace CPP
     {
         static void Main(string[] args)
         {
-            //Process.Start("/bin/bash");
             new GradCPP(new StreamWriter(Console.OpenStandardOutput())).Test();
         }
     }

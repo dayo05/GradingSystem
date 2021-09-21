@@ -1,23 +1,14 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 
 using IroojGradingSystem;
 
-namespace Rust
+namespace LanguageSupport
 {
-    class Program
+    public class Rust : Base
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-            new GradRust(new StreamWriter(Console.OpenStandardOutput())).Test();
-        }
-    }
-
-    public class GradRust : Base
-    {
-        public GradRust(StreamWriter stream, long memoryLimit = 512 * 1024, long timeLimit = 1000, int testCaseCount = 2) : base(stream)
+        public Rust(StreamWriter stream, long memoryLimit = 512 * 1024, long timeLimit = 1000, int testCaseCount = 2) : base(stream)
         {
             base.MemoryLimit = memoryLimit;
             TimeLimit = TimeSpan.FromMilliseconds(timeLimit);
@@ -33,5 +24,3 @@ namespace Rust
         }
     }
 }
-
-// Install: curl https://sh.rustup.rs/ -sSf | sh

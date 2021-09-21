@@ -1,27 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.IO;
+using System.Collections.Generic;
+
 using IroojGradingSystem;
 
-
-namespace CS
+namespace LanguageSupport
 {
-    class Program
+    public class CS : Base
     {
-        static void Main(string[] args)
+        public CS(StreamWriter stream, long memoryLimit = 512 * 1024, long timeLimit = 1000, int testCaseCount = 2) : base(stream)
         {
-            Console.WriteLine("Hello World!");
-            new GradCS(new StreamWriter(Console.OpenStandardOutput())).Test();
-        }
-    }
-
-    public class GradCS : Base
-    {
-        public GradCS(StreamWriter stream) : base(stream)
-        {
-            MemoryLimit = 512 * 1024;
-            TimeLimit = TimeSpan.FromMilliseconds(1000);
-            TestCaseCount = 2;
+            base.MemoryLimit = memoryLimit;
+            TimeLimit = TimeSpan.FromMilliseconds(timeLimit);
+            TestCaseCount = testCaseCount;
             CompileString = new List<string>
             {
                 "/root/.dotnet/dotnet new console --force -o ./Main",
