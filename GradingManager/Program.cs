@@ -26,6 +26,8 @@ namespace GradingManager
                     return "main.aheui";
                 case "Brainfuck":
                     return "main.bf";
+                case "Pypy3":
+                    return "main.py";
                 default:
                     return "Error.log";
             }
@@ -88,6 +90,9 @@ namespace GradingManager
                         break;
                     case "Brainfuck":
                         new BrainFuck(writer, memoryLimit, timeLimit, testCaseCount).Test();
+                        break;
+                    case "Pypy3":
+                        new Pypy3(writer, memoryLimit, timeLimit, testCaseCount).Test();
                         break;
                     default:
                         break;
