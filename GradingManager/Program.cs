@@ -12,25 +12,17 @@ namespace GradingManager
     {
         static string GetSourceCodeByLanguage(string language)
         {
-            switch (language)
+            return language switch
             {
-                case "CPP":
-                    return "main.cpp";
-                case "CS":
-                    return "Main.cs";
-                case "Rust":
-                    return "main.rs";
-                case "Python3":
-                    return "main.py";
-                case "Aheui":
-                    return "main.aheui";
-                case "Brainfuck":
-                    return "main.bf";
-                case "Pypy3":
-                    return "main.py";
-                default:
-                    return "Error.log";
-            }
+                "CPP" => "main.cpp",
+                "CS" => "Main.cs",
+                "Rust" => "main.rs",
+                "Python3" => "main.py",
+                "Aheui" => "main.aheui",
+                "Brainfuck" => "main.bf",
+                "Pypy3" => "main.py",
+                _ => "Error.log"
+            };
         }
         static void Main(string[] args)
         {
