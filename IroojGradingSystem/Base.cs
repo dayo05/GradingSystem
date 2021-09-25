@@ -12,9 +12,9 @@ namespace IroojGradingSystem
     {
         protected List<string> CompileString { get; init; }
         protected string RunScript { get; init; }
-        protected long MemoryLimit { get; set; }
-        protected TimeSpan TimeLimit { get; set; }
-        protected int TestCaseCount { get; set; }
+        public long MemoryLimit { get; set; }
+        public TimeSpan TimeLimit { get; set; }
+        public int TestCaseCount { get; set; }
         private StreamWriter OutputStream { get; init; }
         public Base(StreamWriter stream)
         {
@@ -165,7 +165,7 @@ namespace IroojGradingSystem
                 new XElement("memory", maxMemory / 1024)));
         }
 
-        protected void Start()
+        public void Start()
         {
             SendResult(Result.Running, XmlMessage("Start initialize"));
             // Copy Testcase

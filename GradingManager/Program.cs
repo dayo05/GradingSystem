@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using System.Xml;
 using System.Net.Sockets;
-
+using IroojGradingSystem;
 using LanguageSupport;
 
 namespace GradingManager
@@ -58,6 +58,14 @@ namespace GradingManager
                     if (codesize == 0) break;
                 }
 
+                new Grad(writer, language, code)
+                {
+                    MemoryLimit = memoryLimit,
+                    TimeLimit = TimeSpan.FromMilliseconds(timeLimit),
+                    TestCaseCount = testCaseCount
+                }.Start();
+                
+                /*
                 using var sourcecode = new StreamWriter(GetSourceCodeByLanguage(language));
                 sourcecode.Write(code);
                 
@@ -89,6 +97,7 @@ namespace GradingManager
                     default:
                         break;
                 }
+                */
             }
         }
     }

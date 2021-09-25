@@ -10,7 +10,7 @@ namespace IroojGradingSystem
     {
         public Grad(StreamWriter stream, string language, string source) : base(stream)
         {
-            var xml = XDocument.Load("language.xml").Root?.Element(language);
+            var xml = XDocument.Load("language.xml").Root.Element(language);
             if (xml == null) throw new NullReferenceException("Language not found");
             base.CompileString = new List<string>((from x in xml.Elements("compile_string") select x.Value).ToList());
             base.RunScript = xml.Element("execute_string")?.Value;
