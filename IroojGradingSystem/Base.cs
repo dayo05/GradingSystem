@@ -197,13 +197,16 @@ namespace IroojGradingSystem
         {
             if (xml == null)
             {
-                OutputStream.WriteLine(new XElement("root",
-                    new XElement("Result", result.ToString())).ToString());
+                var o = new XElement("root",
+                    new XElement("Result", result.ToString()));
+                OutputStream.WriteLine(o.ToString().Length);
+                OutputStream.Write(o.ToString());
             }
             else
             {
                 xml.Add(new XElement("Result", result.ToString()));
-                OutputStream.WriteLine(xml.ToString());
+                OutputStream.WriteLine(xml.ToString().Length);
+                OutputStream.Write(xml.ToString());
             }
             OutputStream.Flush();
         }
