@@ -12,11 +12,11 @@ namespace IroojGradingSystem
     {
         protected List<string> CompileString { get; init; }
         protected string RunScript { get; init; }
-        protected long MemoryLimit { get; set; }
-        protected TimeSpan TimeLimit { get; set; }
-        protected int TestCaseCount { get; set; }
+        public long MemoryLimit { get; set; }
+        public TimeSpan TimeLimit { get; set; }
+        public int TestCaseCount { get; set; }
         private StreamWriter OutputStream { get; init; }
-        protected Base(StreamWriter stream)
+        public Base(StreamWriter stream)
         {
             OutputStream = stream;
         }
@@ -165,7 +165,7 @@ namespace IroojGradingSystem
                 new XElement("memory", maxMemory / 1024)));
         }
 
-        protected void Start()
+        public void Start()
         {
             SendResult(Result.Running, XmlMessage("Start initialize"));
             // Copy Testcase
@@ -193,17 +193,20 @@ namespace IroojGradingSystem
         /// </summary>
         /// <param name="result">Result</param>
         /// <param name="xml">Message</param>
-        public virtual void SendResult(Result result, XElement xml = null)
+        protected virtual void SendResult(Result result, XElement xml = null)
         {
             if (xml == null)
             {
-                OutputStream.WriteLine(new XElement("root",
-                    new XElement("Result", result.ToString())).ToString());
+                var o = new XElement("root",
+                    new XElement("Result", result.ToString()));
+                OutputStream.WriteLine(o.ToString().Length);
+                OutputStream.Write(o.ToString());
             }
             else
             {
                 xml.Add(new XElement("Result", result.ToString()));
-                OutputStream.WriteLine(xml.ToString());
+                OutputStream.WriteLine(xml.ToString().Length);
+                OutputStream.Write(xml.ToString());
             }
             OutputStream.Flush();
         }
@@ -229,7 +232,7 @@ namespace IroojGradingSystem
         private static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs = true)
         {
             // Get the subdirectories for the specified directory.
-            DirectoryInfo dir = new DirectoryInfo(sourceDirName);
+            var dir = new DirectoryInfo(sourceDirName);
 
             if (!dir.Exists)
             {
@@ -238,25 +241,25 @@ namespace IroojGradingSystem
                     + sourceDirName);
             }
 
-            DirectoryInfo[] dirs = dir.GetDirectories();
+            var dirs = dir.GetDirectories();
         
             // If the destination directory doesn't exist, create it.       
             Directory.CreateDirectory(destDirName);        
 
             // Get the files in the directory and copy them to the new location.
-            FileInfo[] files = dir.GetFiles();
-            foreach (FileInfo file in files)
+            var files = dir.GetFiles();
+            foreach (var file in files)
             {
-                string tempPath = Path.Combine(destDirName, file.Name);
+                var tempPath = Path.Combine(destDirName, file.Name);
                 file.CopyTo(tempPath, false);
             }
 
             // If copying subdirectories, copy them and their contents to new location.
-            if (copySubDirs)
+            if (!copySubDirs) return;
             {
-                foreach (DirectoryInfo subdir in dirs)
+                foreach (var subdir in dirs)
                 {
-                    string tempPath = Path.Combine(destDirName, subdir.Name);
+                    var tempPath = Path.Combine(destDirName, subdir.Name);
                     DirectoryCopy(subdir.FullName, tempPath);
                 }
             }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/dayo/IroOJ/GradingSystem/TCPTester/TCPTester.csproj": {}
+    "/home/dayo/RiderProjects/GradingSystem/TCPTester/TCPTester.csproj": {}
   },
   "projects": {
-    "/home/dayo/IroOJ/GradingSystem/TCPTester/TCPTester.csproj": {
+    "/home/dayo/RiderProjects/GradingSystem/TCPTester/TCPTester.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dayo/IroOJ/GradingSystem/TCPTester/TCPTester.csproj",
+        "projectUniqueName": "/home/dayo/RiderProjects/GradingSystem/TCPTester/TCPTester.csproj",
         "projectName": "TCPTester",
-        "projectPath": "/home/dayo/IroOJ/GradingSystem/TCPTester/TCPTester.csproj",
+        "projectPath": "/home/dayo/RiderProjects/GradingSystem/TCPTester/TCPTester.csproj",
         "packagesPath": "/home/dayo/.nuget/packages/",
-        "outputPath": "/home/dayo/IroOJ/GradingSystem/TCPTester/obj/",
+        "outputPath": "/home/dayo/RiderProjects/GradingSystem/TCPTester/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/dayo/.nuget/NuGet/NuGet.Config"

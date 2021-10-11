@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/dayo/IroOJ/GradingSystem/GradingManager/GradingManager.csproj": {}
+    "/home/dayo/RiderProjects/GradingSystem/GradingManager/GradingManager.csproj": {}
   },
   "projects": {
-    "/home/dayo/IroOJ/GradingSystem/GradingManager/GradingManager.csproj": {
+    "/home/dayo/RiderProjects/GradingSystem/GradingManager/GradingManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dayo/IroOJ/GradingSystem/GradingManager/GradingManager.csproj",
+        "projectUniqueName": "/home/dayo/RiderProjects/GradingSystem/GradingManager/GradingManager.csproj",
         "projectName": "GradingManager",
-        "projectPath": "/home/dayo/IroOJ/GradingSystem/GradingManager/GradingManager.csproj",
+        "projectPath": "/home/dayo/RiderProjects/GradingSystem/GradingManager/GradingManager.csproj",
         "packagesPath": "/home/dayo/.nuget/packages/",
-        "outputPath": "/home/dayo/IroOJ/GradingSystem/GradingManager/obj/",
+        "outputPath": "/home/dayo/RiderProjects/GradingSystem/GradingManager/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/dayo/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/home/dayo/IroOJ/GradingSystem/LanguageSupport/LanguageSupport.csproj": {
-                "projectPath": "/home/dayo/IroOJ/GradingSystem/LanguageSupport/LanguageSupport.csproj"
+              "/home/dayo/RiderProjects/GradingSystem/LanguageSupport/LanguageSupport.csproj": {
+                "projectPath": "/home/dayo/RiderProjects/GradingSystem/LanguageSupport/LanguageSupport.csproj"
               }
             }
           }
@@ -60,14 +60,14 @@
         }
       }
     },
-    "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj": {
+    "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj",
+        "projectUniqueName": "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj",
         "projectName": "IroojGradingSystem",
-        "projectPath": "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj",
+        "projectPath": "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj",
         "packagesPath": "/home/dayo/.nuget/packages/",
-        "outputPath": "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/obj/",
+        "outputPath": "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/dayo/.nuget/NuGet/NuGet.Config"
@@ -112,14 +112,14 @@
         }
       }
     },
-    "/home/dayo/IroOJ/GradingSystem/LanguageSupport/LanguageSupport.csproj": {
+    "/home/dayo/RiderProjects/GradingSystem/LanguageSupport/LanguageSupport.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dayo/IroOJ/GradingSystem/LanguageSupport/LanguageSupport.csproj",
+        "projectUniqueName": "/home/dayo/RiderProjects/GradingSystem/LanguageSupport/LanguageSupport.csproj",
         "projectName": "LanguageSupport",
-        "projectPath": "/home/dayo/IroOJ/GradingSystem/LanguageSupport/LanguageSupport.csproj",
+        "projectPath": "/home/dayo/RiderProjects/GradingSystem/LanguageSupport/LanguageSupport.csproj",
         "packagesPath": "/home/dayo/.nuget/packages/",
-        "outputPath": "/home/dayo/IroOJ/GradingSystem/LanguageSupport/obj/",
+        "outputPath": "/home/dayo/RiderProjects/GradingSystem/LanguageSupport/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/dayo/.nuget/NuGet/NuGet.Config"
@@ -134,8 +134,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj": {
-                "projectPath": "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj"
+              "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj": {
+                "projectPath": "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj"
               }
             }
           }

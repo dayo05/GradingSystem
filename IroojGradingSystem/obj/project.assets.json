@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj",
+      "projectUniqueName": "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj",
       "projectName": "IroojGradingSystem",
-      "projectPath": "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj",
+      "projectPath": "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/IroojGradingSystem.csproj",
       "packagesPath": "/home/dayo/.nuget/packages/",
-      "outputPath": "/home/dayo/IroOJ/GradingSystem/IroojGradingSystem/obj/",
+      "outputPath": "/home/dayo/RiderProjects/GradingSystem/IroojGradingSystem/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/dayo/.nuget/NuGet/NuGet.Config"

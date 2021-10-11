@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Diagnostics.Tracing;
 using System.IO;
 using System.Net;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading;
 using System.Xml;
-
+using System.Net.Sockets;
 using IroojGradingSystem;
 using LanguageSupport;
 
@@ -16,21 +12,17 @@ namespace GradingManager
     {
         static string GetSourceCodeByLanguage(string language)
         {
-            switch (language)
+            return language switch
             {
-                case "CPP":
-                    return "main.cpp";
-                case "CS":
-                    return "Main.cs";
-                case "Rust":
-                    return "main.rs";
-                case "Python3":
-                    return "main.py";
-                case "Aheui":
-                    return "main.aheui";
-                default:
-                    return "Error.log";
-            }
+                "CPP" => "main.cpp",
+                "CS" => "Main.cs",
+                "Rust" => "main.rs",
+                "Python3" => "main.py",
+                "Aheui" => "main.aheui",
+                "Brainfuck" => "main.bf",
+                "Pypy3" => "main.py",
+                _ => "Error.log"
+            };
         }
         static void Main(string[] args)
         {
@@ -45,51 +37,29 @@ namespace GradingManager
                 using var writer = new StreamWriter(stream);
 
                 Console.WriteLine("Connected");
-                var data = reader.ReadLine();
-                var xmldoc = new XmlDocument();
-                xmldoc.LoadXml(data ?? string.Empty);
-
-                var xml = xmldoc.GetElementsByTagName("root");
-                
-                var timeLimit = long.Parse(xml[0]?["time_limit"]?.InnerText);
-                var memoryLimit = long.Parse(xml[0]?["memory_limit"]?.InnerText);
-                var testCaseCount = int.Parse(xml[0]?["test_case_count"]?.InnerText);
-                var language = xml[0]["language"]?.InnerText;
-                var codesize = int.Parse(xml[0]["code_size"]?.InnerText);
-                var code = "";
-                var buffer = new char[1000];
-                int r;
-                while ((r = reader.Read(buffer, 0, buffer.Length)) != 0)
+                while (true)
                 {
-                    code += new string(buffer)[..r];
-                    codesize -= r;
-                    if (codesize == 0) break;
-                }
+                    var dataSize = int.Parse(reader.ReadLine());
+                    var buffer = new char[dataSize + 10];
+                    reader.Read(buffer, 0, dataSize);
+                    var data = new string(buffer);
+                    var xmldoc = new XmlDocument();
+                    xmldoc.LoadXml(data ?? string.Empty);
 
-                using var sourcecode = new StreamWriter(GetSourceCodeByLanguage(language));
-                sourcecode.Write(code);
-                
-                sourcecode.Flush();
-                Console.WriteLine(language);
-                switch (language)
-                {
-                    case "CPP":
-                        new CPP(writer, memoryLimit, timeLimit, testCaseCount).Test();
-                        break;
-                    case "CS":
-                        new CS(writer, memoryLimit, timeLimit, testCaseCount).Test();
-                        break;
-                    case "Rust":
-                        new Rust(writer, memoryLimit, timeLimit, testCaseCount).Test();
-                        break;
-                    case "Python3":
-                        new Python3(writer, memoryLimit, timeLimit, testCaseCount).Test();
-                        break;
-                    case "Aheui":
-                        new Aheui(writer, memoryLimit, timeLimit, testCaseCount).Test();
-                        break;
-                    default:
-                        break;
+                    var xml = xmldoc.GetElementsByTagName("root");
+
+                    var timeLimit = long.Parse(xml[0]?["time_limit"]?.InnerText);
+                    var memoryLimit = long.Parse(xml[0]?["memory_limit"]?.InnerText);
+                    var testCaseCount = int.Parse(xml[0]?["test_case_count"]?.InnerText);
+                    var language = xml[0]["language"]?.InnerText;
+                    var code = xml[0]["code"]?.InnerText;
+
+                    new Grad(writer, language, code)
+                    {
+                        MemoryLimit = memoryLimit,
+                        TimeLimit = TimeSpan.FromMilliseconds(timeLimit),
+                        TestCaseCount = testCaseCount
+                    }.Start();
                 }
             }
         }

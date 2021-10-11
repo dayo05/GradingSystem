@@ -50,11 +50,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dayo/IroOJ/GradingSystem/GradingManager/GradingManager.csproj",
+      "projectUniqueName": "/home/dayo/RiderProjects/GradingSystem/GradingManager/GradingManager.csproj",
       "projectName": "GradingManager",
-      "projectPath": "/home/dayo/IroOJ/GradingSystem/GradingManager/GradingManager.csproj",
+      "projectPath": "/home/dayo/RiderProjects/GradingSystem/GradingManager/GradingManager.csproj",
       "packagesPath": "/home/dayo/.nuget/packages/",
-      "outputPath": "/home/dayo/IroOJ/GradingSystem/GradingManager/obj/",
+      "outputPath": "/home/dayo/RiderProjects/GradingSystem/GradingManager/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/dayo/.nuget/NuGet/NuGet.Config"
@@ -69,8 +69,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/home/dayo/IroOJ/GradingSystem/LanguageSupport/LanguageSupport.csproj": {
-              "projectPath": "/home/dayo/IroOJ/GradingSystem/LanguageSupport/LanguageSupport.csproj"
+            "/home/dayo/RiderProjects/GradingSystem/LanguageSupport/LanguageSupport.csproj": {
+              "projectPath": "/home/dayo/RiderProjects/GradingSystem/LanguageSupport/LanguageSupport.csproj"
             }
           }
         }
