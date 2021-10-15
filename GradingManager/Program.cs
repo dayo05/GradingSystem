@@ -51,6 +51,7 @@ namespace GradingManager
                     var timeLimit = long.Parse(xml[0]?["time_limit"]?.InnerText);
                     var memoryLimit = long.Parse(xml[0]?["memory_limit"]?.InnerText);
                     var testCaseCount = int.Parse(xml[0]?["test_case_count"]?.InnerText);
+                    var judgeNumber = long.Parse(xml[0]?["judge_number"]?.InnerText);
                     var language = xml[0]["language"]?.InnerText;
                     var code = xml[0]["code"]?.InnerText;
 
@@ -58,7 +59,8 @@ namespace GradingManager
                     {
                         MemoryLimit = memoryLimit,
                         TimeLimit = TimeSpan.FromMilliseconds(timeLimit),
-                        TestCaseCount = testCaseCount
+                        TestCaseCount = testCaseCount,
+                        JudgeNumber = judgeNumber
                     }.Start();
                 }
             }

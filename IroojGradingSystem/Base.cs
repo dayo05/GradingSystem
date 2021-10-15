@@ -12,11 +12,12 @@ namespace IroojGradingSystem
     {
         protected List<string> CompileString { get; init; }
         protected string RunScript { get; init; }
-        public long MemoryLimit { get; set; }
-        public TimeSpan TimeLimit { get; set; }
-        public int TestCaseCount { get; set; }
+        public long MemoryLimit { get; init; }
+        public TimeSpan TimeLimit { get; init; }
+        public int TestCaseCount { get; init; }
+        public long JudgeNumber { get; init; }
         private StreamWriter OutputStream { get; init; }
-        public Base(StreamWriter stream)
+        protected Base(StreamWriter stream)
         {
             OutputStream = stream;
         }
@@ -177,7 +178,7 @@ namespace IroojGradingSystem
             if (Compile())
             {
                 SendResult(Result.Running, XmlMessage("Launch"));
-                Launch();
+                Launch(); 
             }
             Directory.SetCurrentDirectory("..");
             Directory.Delete("grad", true);
@@ -198,13 +199,14 @@ namespace IroojGradingSystem
             if (xml == null)
             {
                 var o = new XElement("root",
-                    new XElement("Result", result.ToString()));
+                    new XElement("Result", result.ToString()), new XElement("judge_number", JudgeNumber));
                 OutputStream.WriteLine(o.ToString().Length);
                 OutputStream.Write(o.ToString());
             }
             else
             {
                 xml.Add(new XElement("Result", result.ToString()));
+                xml.Add(new XElement("judge_number", JudgeNumber));
                 OutputStream.WriteLine(xml.ToString().Length);
                 OutputStream.Write(xml.ToString());
             }
