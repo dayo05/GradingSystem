@@ -5,7 +5,6 @@
 /home/dayo/RiderProjects/GradingSystem/TCPTester/bin/Debug/net5.0/TCPTester.dll
 /home/dayo/RiderProjects/GradingSystem/TCPTester/bin/Debug/net5.0/ref/TCPTester.dll
 /home/dayo/RiderProjects/GradingSystem/TCPTester/bin/Debug/net5.0/TCPTester.pdb
-/home/dayo/RiderProjects/GradingSystem/TCPTester/obj/Debug/net5.0/TCPTester.csprojAssemblyReference.cache
 /home/dayo/RiderProjects/GradingSystem/TCPTester/obj/Debug/net5.0/TCPTester.GeneratedMSBuildEditorConfig.editorconfig
 /home/dayo/RiderProjects/GradingSystem/TCPTester/obj/Debug/net5.0/TCPTester.AssemblyInfoInputs.cache
 /home/dayo/RiderProjects/GradingSystem/TCPTester/obj/Debug/net5.0/TCPTester.AssemblyInfo.cs
@@ -30,3 +29,4 @@
 /home/dayo/IroOJ/GradingSystem/TCPTester/obj/Debug/net5.0/ref/TCPTester.dll
 /home/dayo/IroOJ/GradingSystem/TCPTester/obj/Debug/net5.0/TCPTester.pdb
 /home/dayo/IroOJ/GradingSystem/TCPTester/obj/Debug/net5.0/TCPTester.genruntimeconfig.cache
+/home/dayo/RiderProjects/GradingSystem/TCPTester/obj/Debug/net5.0/TCPTester.csproj.AssemblyReference.cache

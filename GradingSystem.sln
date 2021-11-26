@@ -4,8 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IroojGradingSystem", "Irooj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradingManager", "GradingManager\GradingManager.csproj", "{834673C3-5437-4BC7-9A9B-C0942ACF92AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPTester", "TCPTester\TCPTester.csproj", "{C7FA794C-7225-4283-A84F-77BBAEF0F570}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageSupport", "LanguageSupport\LanguageSupport.csproj", "{C8ADD08C-48EF-47EA-AD4A-47CC4900AB05}"
 EndProject
 Global
@@ -22,10 +20,6 @@ Global
 		{834673C3-5437-4BC7-9A9B-C0942ACF92AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{834673C3-5437-4BC7-9A9B-C0942ACF92AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{834673C3-5437-4BC7-9A9B-C0942ACF92AD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C7FA794C-7225-4283-A84F-77BBAEF0F570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7FA794C-7225-4283-A84F-77BBAEF0F570}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7FA794C-7225-4283-A84F-77BBAEF0F570}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7FA794C-7225-4283-A84F-77BBAEF0F570}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C8ADD08C-48EF-47EA-AD4A-47CC4900AB05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C8ADD08C-48EF-47EA-AD4A-47CC4900AB05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8ADD08C-48EF-47EA-AD4A-47CC4900AB05}.Release|Any CPU.ActiveCfg = Release|Any CPU

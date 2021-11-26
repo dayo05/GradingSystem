@@ -10,6 +10,7 @@ namespace IroojGradingSystem
 {
     public class Base
     {
+        public long QuestionNumber { get; init; }
         protected List<string> CompileString { get; init; }
         protected string RunScript { get; init; }
         public long MemoryLimit { get; init; }
@@ -66,7 +67,7 @@ namespace IroojGradingSystem
                 SendResult(Result.Running, XmlMessage("Running: " + i + "/" + TestCaseCount));
                 using(var execSh = new StreamWriter("exec.sh"))
                 {
-                    execSh.WriteLine($"{RunScript} < grad_input/{i} > output");
+                    execSh.WriteLine($"{RunScript} < grad_input/{i}.in > output");
                 }
                 
                 var process = Run("/bin/bash exec.sh");
@@ -129,7 +130,7 @@ namespace IroojGradingSystem
                     SendResult(Result.RTE, XmlMessage(CheckRteString(e)));
                     return;
                 }
-                using var ans = new StreamReader("grad_output/" + i);
+                using var ans = new StreamReader($"grad_output/{i}.out");
                 var output = new StreamReader("output");
                 
                 while (true)
@@ -170,8 +171,8 @@ namespace IroojGradingSystem
         {
             SendResult(Result.Running, XmlMessage("Start initialize"));
             // Copy Testcase
-            DirectoryCopy("grad_input", "grad/grad_input");
-            DirectoryCopy("grad_output", "grad/grad_output");
+            DirectoryCopy($"grad_input/{QuestionNumber}/", $"grad/grad_input/");
+            DirectoryCopy($"grad_output/{QuestionNumber}/", $"grad/grad_output/");
             
             Directory.SetCurrentDirectory("grad");
             SendResult(Result.Running, XmlMessage("Start Compile"));
@@ -253,7 +254,9 @@ namespace IroojGradingSystem
             foreach (var file in files)
             {
                 var tempPath = Path.Combine(destDirName, file.Name);
-                file.CopyTo(tempPath, false);
+                //file.CopyTo(tempPath, false);
+                
+                File.Copy(file.FullName, tempPath);
             }
 
             // If copying subdirectories, copy them and their contents to new location.

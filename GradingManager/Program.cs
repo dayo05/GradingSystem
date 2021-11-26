@@ -48,6 +48,7 @@ namespace GradingManager
 
                     var xml = xmldoc.GetElementsByTagName("root");
 
+                    var questionNumber = long.Parse(xml[0]?["question_number"]?.InnerText);
                     var timeLimit = long.Parse(xml[0]?["time_limit"]?.InnerText);
                     var memoryLimit = long.Parse(xml[0]?["memory_limit"]?.InnerText);
                     var testCaseCount = int.Parse(xml[0]?["test_case_count"]?.InnerText);
@@ -57,6 +58,7 @@ namespace GradingManager
 
                     new Grad(writer, language, code)
                     {
+                        QuestionNumber = questionNumber,
                         MemoryLimit = memoryLimit,
                         TimeLimit = TimeSpan.FromMilliseconds(timeLimit),
                         TestCaseCount = testCaseCount,
